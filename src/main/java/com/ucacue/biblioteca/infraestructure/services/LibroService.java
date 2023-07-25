@@ -28,4 +28,8 @@ public class LibroService {
     public List<Libro> getLibrosByGenero(String genero){
         return libroRepository.findByGenero(genero);
     }
+
+    public Libro save(Libro libro){
+        return libroRepository.save(libro);
+    }
 }

@@ -37,4 +37,9 @@ public class LibroController {
     ResponseEntity<List<Libro>> getLibrosByGenero(@RequestBody String genero){
         return ResponseEntity.ok(libroService.getLibrosByGenero(genero));
     }
+
+    @PostMapping("/libros/save")
+    ResponseEntity<Libro> save(@RequestBody Libro libro){
+        return ResponseEntity.ok(libroService.save(libro));
+    }
 }

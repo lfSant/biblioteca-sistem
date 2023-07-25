@@ -12,5 +12,6 @@ public interface LibroRepository extends JpaRepository<Libro, Integer> {
     List<Libro> findByNombre(String nombre);
     List<Libro> findByAutor(String autor);
     List<Libro> findByGenero(String genero);
+    Libro save(Libro libro);
 
 }
