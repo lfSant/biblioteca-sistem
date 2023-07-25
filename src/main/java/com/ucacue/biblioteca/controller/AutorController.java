@@ -6,10 +6,7 @@ import com.ucacue.biblioteca.model.Autor;
 import com.ucacue.biblioteca.model.Libro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 //esto es un controlador
@@ -17,6 +14,7 @@ import java.util.List;
 @Controller
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class AutorController {
 
     @Autowired
